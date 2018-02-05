@@ -1,0 +1,30 @@
+AppBundle\Entity\Member:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Entity\MemberRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '255'
+        email:
+            type: string
+            length: '255'
+        mobileNumber:
+            type: string
+            length: '255'
+        address:
+            type: string
+            length: '255'
+    manyToOne:
+        memberRegion:
+          targetEntity: Region
+          joinColumn:
+            name: region
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

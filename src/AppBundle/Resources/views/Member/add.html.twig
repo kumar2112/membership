@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title %}isoftBet -ADD NEW MEMBER!{% endblock %}
+{% block sidebar_left  %}
+      {% include 'AppBundle:Shared:sidebar-left.html.twig' %}
+{% endblock sidebar_left %}
+{% block content  %}
+    <div class="content">
+          <div class='row text-center'>
+                <div class="col-md-12">
+                    <h2> Add New Member</h2>
+                    <!--
+                    <h2 class="text-left">
+                        <a href="" class="btn btn-default" style="float:right">BACK TO CUSTOMER LIST</a>
+                    </h2>
+                    -->
+                </div>
+          </div>
+          <div class='row'>
+               <div class="col-md-12">
+
+                    <form method="post" action="{{path('member_add')}}" id="member_add" name="add_member_form" novalidate="1">
+                          <div class="form-group">
+                              <lable>Member Name</lable>
+                              <input type="text" id="member_name" name="member_name" required="required" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <lable>Member Email</lable>
+                              <input type="text" id="member_email" name="member_email" required="required" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <lable>Member Phone</lable>
+                              <input type="text" id="member_phone" name="member_phone" required="required" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <lable>Member Address</lable>
+                              <input type="text" id="member_address" name="member_address" required="required" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <lable>Member Region</lable>
+                              <select name="member_region" id="member_region" class="form-control">
+                                  {% for region in regions %}
+                                     <option value="{{region.getId}}">{{region.getName}}</option>
+                                  {% endfor %}
+
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-default">Create Member</a>
+                          </div>
+                    </form>
+              </div>
+          </div>
+    </div>
+{% endblock content%}

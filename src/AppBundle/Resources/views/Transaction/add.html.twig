@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}isoftBet -ADD NEW TRANSACTION!{% endblock %}
+{% block sidebar_left  %}
+      {% include 'AppBundle:Shared:sidebar-left.html.twig' %}
+{% endblock sidebar_left %}
+{% block content  %}
+    <div class="content">
+          <div class='row text-center'>
+                <div class="col-md-12">
+                    <h2> Create New Transaction</h2>
+                    <h2 class="text-left">
+                        <a href="{{path('transaction_list')}}" class="btn btn-default" style="float:right">BACK TO TRANSACTION LIST</a>
+                    </h2>
+                </div>
+          </div>
+          <div class='row'>
+              <div class="col-md-12">
+                    <form method="post" action="{{path('transaction_create')}}" id="create_transaction_form" name="create_transaction_form" novalidate="1">
+                         <div class="form-group">
+                             <lable>Customer Cnp(Customer Id)</lable>
+                             <input type="text" id="form_cnp" name="cnp" required="required" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <lable>Amount</lable>
+                             <input type="number" id="form_amount" name="amount" required="required" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <lable>Transaction Type</lable>
+                             <select id="form_type" name="type" class="form-control form-select">
+                                  <option value="D">DEBIT(-)</a>
+                                  <option value="C">CREDIT(+)</a>
+                            </select>
+                         </div>
+
+                         <div class="form-group">
+                             <button type="submit" class="btn btn-default">Process</a>
+                         </div>
+                   </form>
+              </div>
+          </div>
+    </div>
+{% endblock content%}

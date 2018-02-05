@@ -1,0 +1,61 @@
+# customer_list:
+#     path:     customer/list
+#     defaults: { _controller: AppBundle:Customer:list }
+
+region_add:
+    path:     region/add
+    defaults: { _controller: AppBundle:Region:add }
+
+# customer_create:
+#     path:     customer/create
+#     defaults: { _controller: AppBundle:Customer:create }
+#     methods: [POST]
+#
+# transaction_add:
+#     path:     transaction/add
+#     defaults: { _controller: AppBundle:Transaction:add }
+#
+# transaction_create:
+#     path:     transaction/create
+#     defaults: { _controller: AppBundle:Transaction:create }
+#     methods: [POST]
+#
+# transaction_list:
+#     path:     transaction/list
+#     defaults: { _controller: AppBundle:Transaction:list }
+#     methods:  [GET|POST]
+#
+# transaction_edit:
+#     path:     transaction/edit/{transactionid}
+#     defaults: { _controller: AppBundle:Transaction:edit }
+#     requirements:
+#         transactionid: '\d+'
+# transaction_update:
+#     path:     transaction/update
+#     defaults: { _controller: AppBundle:Transaction:update }
+#     methods: [POST]
+#
+# transaction_delete:
+#     path:     transaction/delete/{transactionid}
+#     defaults: { _controller: AppBundle:Transaction:delete }
+#     requirements:
+#          transactionid: '\d+'
+#
+# transaction_single:
+#        path:     transaction/{customerid}/{transactionid}
+#        defaults: { _controller: AppBundle:Transaction:getSingleTransaction }
+#        methods: [GET]
+#        requirements:
+#             customerid: '\d+'
+#             transactionid: '\d+'
+# transaction_filter:
+#        path:     transaction/{customerid}/{transactionid}
+#        defaults: { _controller: AppBundle:Transaction:getSingleTransaction }
+#        methods: [GET]
+#        requirements:
+#             customerid: '\d+'
+#             transactionid: '\d+'
+
+member_add:
+    path:     member/add
+    defaults: { _controller: AppBundle:Member:add }

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title %}isoftBet -ADD NEW REGION!{% endblock %}
+{% block sidebar_left  %}
+      {% include 'AppBundle:Shared:sidebar-left.html.twig' %}
+{% endblock sidebar_left %}
+{% block content  %}
+    <div class="content">
+          <div class='row text-center'>
+                <div class="col-md-12">
+                    <h2> Add New Region</h2>
+                    <!--
+                    <h2 class="text-left">
+                        <a href="" class="btn btn-default" style="float:right">BACK TO CUSTOMER LIST</a>
+                    </h2>
+                    -->
+                </div>
+          </div>
+          <div class='row'>
+               <div class="col-md-12">
+
+                    <form method="post" action="{{path('region_add')}}" id="add_region_form" name="add_region_form" novalidate="1">
+                          <div class="form-group">
+                              <lable>Region Name</lable>
+                              <input type="text" id="region_name" name="region_name" required="required" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <lable>Max Member</lable>
+                              <input type="text" id="region_max_members" name="region_max_members" required="required" class="form-control">
+                          </div>
+
+                          <div class="form-group">
+                              <button type="submit" class="btn btn-default">Create Region</a>
+                          </div>
+                    </form>
+              </div>
+          </div>
+    </div>
+{% endblock content%}
